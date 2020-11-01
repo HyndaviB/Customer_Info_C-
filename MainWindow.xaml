@@ -1,0 +1,43 @@
+﻿<Window x:Class="DataManagement.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:DataManagement"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450"
+        AllowsTransparency="True" Background="Transparent" WindowStyle="None"
+        ResizeMode="NoResize" 
+    
+       MouseDown="Window_MouseDown">
+    <Grid>
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#F47B8F" Offset="0.0"/>
+                    <GradientStop Color="#51AEAE" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Label FontSize="25"  FontFamily="helivatica" HorizontalAlignment="Center" >Customer Management</Label>
+        <StackPanel Margin="50">
+            <Label  FontFamily="helivatica"  FontSize="18">Customer Id:</Label>
+            <TextBox Name="Customer_id"   FontFamily="helivatica"  FontSize="18" />
+            <Label  FontFamily="helivatica"  FontSize="18">Name:</Label>
+            <TextBox Name="Full_name"  FontFamily="helivatica"  FontSize="18"  />
+            <Label />
+            <Label  FontFamily="helivatica"  FontSize="18">Email:</Label>
+            <TextBox Name="Email"  FontFamily="helivatica"  FontSize="18" />
+            <Label  FontFamily="helivatica"  FontSize="18">Date of Birth:</Label>
+            <DatePicker Name="Dob" HorizontalAlignment="Left" Margin="0,0,0,0"  Width="350" />
+            <Label />
+            <Label FontFamily="helivatica"  FontSize="18">Address:</Label>
+            <TextBox Name="Address" FontFamily="helivatica"  FontSize="18" />
+            <Label />
+            <Label/>
+        </StackPanel>
+        <Button Margin="0,340,200,20" Width="100" Height="30" Content="SAVE" Click="Save" FontSize="18"  FontFamily="helivatica"/>
+        <Button Margin="200,340,0,20" Width="100" Height="30" Content="VIEW" Click="View" FontSize="18"  FontFamily="helivatica" />
+        <Button Margin="0,400,0,0" Width="100" Height="30" Content="Close" Click="Close" FontSize="18"  FontFamily="helivatica"/>
+    </Grid>
+</Window>
